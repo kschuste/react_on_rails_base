@@ -1,6 +1,6 @@
 module ReactOnRailsBase
 
-  class HelloWorld
+  class HelloUniverse
 
     #include ActionView::Helpers
     #include ActionView::Context
@@ -18,7 +18,7 @@ module ReactOnRailsBase
     # Returns a HTML String.
     def render_with_template(template)
 
-      template.react_component('HelloWorld',
+      template.react_component('HelloUniverse',
                                props: {'name': @name},
                                prerender: true)
 

@@ -1,13 +1,13 @@
 import React, { PropTypes } from 'react';
 import ReactOnRails from 'react-on-rails';
 
-export default class HelloWorld extends React.Component {
+export default class HelloUniverse extends React.Component {
 
   render() {
 
     return (
       <div>
-        <h1>Hello World</h1>
+        <h1>Hello Universe</h1>
         <p>{this.props.name}</p>
       </div>
     );
@@ -15,4 +15,4 @@ export default class HelloWorld extends React.Component {
   }
 };
 
-ReactOnRails.register({ HelloWorld });
+ReactOnRails.register({ HelloUniverse });
