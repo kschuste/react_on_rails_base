@@ -1,5 +1,12 @@
+require 'react_on_rails_base/hello_world'
+
 class HelloWorldController < ApplicationController
+
   def index
-    @hello_world_props = { name: "Stranger" }
+
+    @model = ReactOnRailsBase::HelloWorld.new({ name: "Stranger" })
+
+    render formats: :html
+
   end
 end
