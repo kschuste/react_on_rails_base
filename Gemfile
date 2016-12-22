@@ -53,4 +53,4 @@ gem 'mini_racer', platforms: :ruby
 
 gem 'haml', '~> 4.0'
 gem 'haml-rails', '~> 0.4'
-#gem 'react_on_rails_dependent', :path => '../react_on_rails_dependent'
+gem 'react_on_rails_dependent', :path => '../react_on_rails_dependent'

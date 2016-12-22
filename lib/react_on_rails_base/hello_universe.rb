@@ -2,9 +2,6 @@ module ReactOnRailsBase
 
   class HelloUniverse
 
-    #include ActionView::Helpers
-    #include ActionView::Context
-
     attr_reader :name
 
     def initialize(data = {})
@@ -18,9 +15,15 @@ module ReactOnRailsBase
     # Returns a HTML String.
     def render_with_template(template)
 
-      template.react_component('HelloUniverse',
+      html = []
+      html <<  template.react_component('HelloUniverse',
                                props: {'name': @name},
                                prerender: true)
+
+      helloWorld = ReactOnRailsDependent::HelloWorld.new({'name': @name})
+      html << helloWorld.render_with_template(template)
+
+      html.join('').html_safe
 
     end
   end
